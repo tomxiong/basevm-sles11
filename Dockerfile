@@ -7,16 +7,16 @@ RUN zypper --no-gpg-checks refresh
 #  zypper --gpg-auto-import-keys --non-interactive update  
   
 # Install Basevm Dependencies
-RUN zypper install --auto-agree-with-licenses \
+RUN zypper --non-interactive install --auto-agree-with-licenses \
 	tcpdump \
-	coreutils \
-	grep \
-	pwdutils \
+#	coreutils \
+#	grep \
+#	pwdutils \
 	sudo \
 	syslog-ng
 	openssh 
 #	vim \
-RUN zypper install --auto-agree-with-licenses \
+RUN zypper --non-interactive install --auto-agree-with-licenses \
 	dialog \
 #	apparmor-docs \
 #	yast2-apparmor \
@@ -32,7 +32,7 @@ RUN zypper install --auto-agree-with-licenses \
 	ntp \
 	psmisc 
 #	apparmor-admin_en \
-RUN zypper install --auto-agree-with-licenses \
+RUN zypper --non-interactive install --auto-agree-with-licenses \
 	eject \
 	file \
 	groff \
@@ -48,7 +48,7 @@ RUN zypper install --auto-agree-with-licenses \
 	postfix \
 	procinfo \
 	rrdtool
-RUN zypper install --auto-agree-with-licenses \	
+RUN zypper --non-interactive install --auto-agree-with-licenses \	
 	sensors \
 	telnet \
 	usbutils \
