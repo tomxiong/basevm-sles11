@@ -39,13 +39,13 @@ RUN zypper --non-interactive install --auto-agree-with-licenses \
 	ifplugd \
 	less \
 	libart_lgpl \
-	libgcrypt \
-	libgpg-error \
+#	libgcrypt \
+#	libgpg-error \
 	libxslt \
 	man \
 	man-pages \
-	net-snmp \
-	postfix \
+#	net-snmp \
+#	postfix \
 	procinfo \
 	rrdtool
 RUN zypper --non-interactive install --auto-agree-with-licenses \	
