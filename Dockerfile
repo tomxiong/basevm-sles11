@@ -24,8 +24,8 @@ RUN zypper --non-interactive install --auto-agree-with-licenses \
 #	apparmor-utils \
 #	apparmor-parser \
 #	libapparmor \
-	pmtools \
-	iputils \
+#	pmtools \
+#	iputils \
 	ethtool \
 #	libstdc++ \
 	libstdc++33 \
