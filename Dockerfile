@@ -13,7 +13,7 @@ RUN zypper --non-interactive install --auto-agree-with-licenses \
 #	grep \
 #	pwdutils \
 	sudo \
-	syslog-ng
+	syslog-ng \
 	openssh 
 #	vim \
 RUN zypper --non-interactive install --auto-agree-with-licenses \
