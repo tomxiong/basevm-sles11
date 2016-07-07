@@ -13,23 +13,25 @@ RUN zypper install --auto-agree-with-licenses \
 	pwdutils \
 	sudo \
 	syslog-ng
-	openssh \
-	vim \
+	openssh 
+#	vim \
+RUN zypper install --auto-agree-with-licenses \
 	dialog \
-	apparmor-docs \
-	yast2-apparmor \
-	apparmor-profiles \
-	apparmor-utils \
-	apparmor-parser \
-	libapparmor \
+#	apparmor-docs \
+#	yast2-apparmor \
+#	apparmor-profiles \
+#	apparmor-utils \
+#	apparmor-parser \
+#	libapparmor \
 	pmtools \
 	iputils \
 	ethtool \
 	libstdc++ \
 	libstdc++33 \
 	ntp \
-	psmisc \
-	apparmor-admin_en \
+	psmisc 
+#	apparmor-admin_en \
+RUN zypper install --auto-agree-with-licenses \
 	eject \
 	file \
 	groff \
@@ -44,7 +46,8 @@ RUN zypper install --auto-agree-with-licenses \
 	net-snmp \
 	postfix \
 	procinfo \
-	rrdtool \
+	rrdtool
+RUN zypper install --auto-agree-with-licenses \	
 	sensors \
 	telnet \
 	usbutils \
@@ -66,7 +69,7 @@ RUN zypper install --auto-agree-with-licenses \
 	zip \
 	unzip \
 	supportutils \
-	open-vm-tools \
+#	open-vm-tools \
 	kdump 
 #RUN cd /tmp && \
 #	zypper --non-interactive install libyaml-0-2 && \
