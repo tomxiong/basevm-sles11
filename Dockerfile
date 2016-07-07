@@ -27,7 +27,7 @@ RUN zypper --non-interactive install --auto-agree-with-licenses \
 	pmtools \
 	iputils \
 	ethtool \
-	libstdc++ \
+#	libstdc++ \
 	libstdc++33 \
 	ntp \
 	psmisc 
