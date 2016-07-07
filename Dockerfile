@@ -1,29 +1,80 @@
-FROM gbeutner/sles-11-sp3-x86_64
+FROM mstormo/suse
 MAINTAINER Tom Xiong<tom.xiong@software.dell.com> 
 
-# Install sles 11 sp3 repository & Refresh repositories & Update System
-RUN zypper --non-interactive addrepo -G \
-  http://ftp5.gwdg.de/pub/opensuse/discontinued/distribution/11.3/repo/oss/suse main && \
-  zypper --non-interactive addrepo -G \
-  http://download.opensuse.org/distribution/11.3/repo/non-oss/suse/ nonoss && \
-  zypper --non-interactive addrepo -G \
-  http://download.opensuse.org/update/11.3/suse update && \
-  zypper refresh && \
+# Install sles 11 sp4 repository & Refresh repositories & Update System
+RUN zypper refresh && \
   zypper --gpg-auto-import-keys --non-interactive update  
   
 # Install Basevm Dependencies
 RUN zypper --non-interactive install --auto-agree-with-licenses \
-  vim \
-  wget \
-  cron \
-  ntp \
-  sudo \
-  iputils \
-  iptables \
-  sysconfig \
-  ruby \
-  syslog-ng \
-  tcpdump \
-  libaio
-  
-  
+	tcpdump \
+	coreutils \
+	grep \
+	pwdutils \
+	sudo \
+	syslog-ng
+	openssh \
+	vim \
+	dialog \
+	apparmor-docs \
+	yast2-apparmor \
+	apparmor-profiles \
+	apparmor-utils \
+	apparmor-parser \
+	libapparmor \
+	pmtools \
+	iputils \
+	ethtool \
+	libstdc++ \
+	libstdc++33 \
+	ntp \
+	psmisc \
+	apparmor-admin_en \
+	eject \
+	file \
+	groff \
+	ifplugd \
+	less \
+	libart_lgpl \
+	libgcrypt \
+	libgpg-error \
+	libxslt \
+	man \
+	man-pages \
+	net-snmp \
+	postfix \
+	procinfo \
+	rrdtool \
+	sensors \
+	telnet \
+	usbutils \
+	xinetd \
+	audit \
+	pax \
+	cron \
+	bind-libs \
+	bind-utils \
+	cifs-mount \
+	binutils \
+	expect \
+	bc \
+	gettext \
+	procmail \
+	sysstat \
+	iptables \
+	xfsprogs \
+	zip \
+	unzip \
+	supportutils \
+	open-vm-tools \
+	kdump 
+#RUN cd /tmp && \
+#	zypper --non-interactive install libyaml-0-2 && \
+#	wget http://download.opensuse.org/distribution/13.2/repo/oss/suse/x86_64/ruby2.1-rubygem-gem2rpm-0.10.1-2.2.3.x86_64.rpm
+#    wget ftp://fr2.rpmfind.net/linux/opensuse/distribution/13.2/repo/oss/suse/noarch/ruby-common-2.1-2.1.noarch.rpm && \
+#	wget http://download.opensuse.org/distribution/13.2/repo/oss/suse/x86_64/ruby2.1-stdlib-2.1.3-1.1.x86_64.rpm && \
+#	wget http://download.opensuse.org/distribution/13.2/repo/oss/suse/x86_64/ruby2.1-2.1.3-1.1.x86_64.rpm && \
+#    wget  http://download.opensuse.org/distribution/13.2/repo/oss/suse/x86_64/puppet-3.7.1-1.3.x86_64.rpm && \
+#	rpm -iv /tmp/puppet-3.7.1-1.3.x86_64.rpm
+	
+	
