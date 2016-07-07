@@ -12,7 +12,7 @@ RUN  \
 #&& \
 #  zypper --gpg-auto-import-keys --non-interactive update    
 # Install Basevm Dependencies
-&& zypper --non-interactive install --no-recommends --download-in-advance --auto-agree-with-licenses \
+   zypper --non-interactive install --no-recommends --download-in-advance --auto-agree-with-licenses \
 	tcpdump \
 #	coreutils \
 #	grep \
