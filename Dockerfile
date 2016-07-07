@@ -2,8 +2,9 @@ FROM mstormo/suse
 MAINTAINER Tom Xiong<tom.xiong@software.dell.com> 
 
 # Install sles 11 sp4 repository & Refresh repositories & Update System
-RUN zypper --no-gpg-checks refresh && \
-  zypper --gpg-auto-import-keys --non-interactive update  
+RUN zypper --no-gpg-checks refresh 
+#&& \
+#  zypper --gpg-auto-import-keys --non-interactive update  
   
 # Install Basevm Dependencies
 RUN zypper install --auto-agree-with-licenses \
