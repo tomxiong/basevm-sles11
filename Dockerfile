@@ -6,7 +6,7 @@ RUN zypper --no-gpg-checks refresh && \
   zypper --gpg-auto-import-keys --non-interactive update  
   
 # Install Basevm Dependencies
-RUN zypper --non-interactive install --auto-agree-with-licenses \
+RUN zypper install --auto-agree-with-licenses \
 	tcpdump \
 	coreutils \
 	grep \
