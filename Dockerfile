@@ -20,7 +20,8 @@ RUN  \
 	sudo \
 	syslog-ng \
 	openssh \
-#	vim \
+	vim \
+	curl \
 #RUN zypper --non-interactive install --auto-agree-with-licenses \
 	dialog \
 #	apparmor-docs \
